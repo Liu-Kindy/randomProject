@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Berita Demo Indonesia - Info Terkini</title>
+    <style>
+        /* Reset CSS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: #e63946;
+            color: white;
+            padding: 1rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 1.5rem;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: opacity 0.3s;
+        }
+        
+        nav ul li a:hover {
+            opacity: 0.8;
+        }
+        
+        /* Main Content */
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        
+        .headline {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+        
+        .headline-image {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+        
+        .headline-content {
+            padding: 1.5rem;
+        }
+        
+        .headline-title {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #1d3557;
+        }
+        
+        .headline-meta {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .headline-meta span {
+            margin-right: 1rem;
+        }
+        
+        .headline-text {
+            margin-bottom: 1rem;
+        }
+        
+        .read-more {
+            display: inline-block;
+            background-color: #1d3557;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background-color 0.3s;
+        }
+        
+        .read-more:hover {
+            background-color: #457b9d;
+        }
+        
+        /* News Grid */
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .news-card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .news-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .news-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .news-content {
+            padding: 1.5rem;
+        }
+        
+        .news-title {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: #1d3557;
+        }
+        
+        .news-meta {
+            color: #666;
+            font-size: 0.8rem;
+            margin-bottom: 1rem;
+        }
+        
+        .news-excerpt {
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #1d3557;
+            color: white;
+            padding: 2rem 1rem;
+            margin-top: 3rem;
+        }
+        
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        
+        .footer-section h3 {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #457b9d;
+            padding-bottom: 0.5rem;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .footer-links a {
+            color: #f1faee;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: #a8dadc;
+        }
+        
+        .copyright {
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 1rem;
+            border-top: 1px solid #457b9d;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            nav ul {
+                margin-top: 1rem;
+                justify-content: center;
+            }
+            
+            nav ul li {
+                margin: 0 0.5rem;
+            }
+            
+            .headline-title {
+                font-size: 1.5rem;
+            }
+            
+            .headline-image {
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">BeritaDemo.ID</div>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Berita Terbaru</a></li>
+                    <li><a href="#">Analisis</a></li>
+                    <li><a href="#">Tentang Kami</a></li>
+                    <li><a href="#">Kontak</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <main class="container">
+        <article class="headline">
+            <img src="https://images.unsplash.com/photo-1617791160505-6f00527e60d3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80" alt="Demo Mahasiswa" class="headline-image">
+            <div class="headline-content">
+                <h1 class="headline-title">Mahasiswa Jakarta Demo UU Cipta Kerja, Tuntut Revisi</h1>
+                <div class="headline-meta">
+                    <span>Oleh: Ahmad Faisal</span>
+                    <span>23 Oktober 2023</span>
+                    <span>Kategori: Politik</span>
+                </div>
+                <p class="headline-text">
+                    Ribuan mahasiswa dari berbagai universitas di Jakarta kembali menggelar unjuk rasa menolak Undang-Undang Cipta Kerja. Aksi yang berlangsung secara damai ini menuntut pemerintah merevisi UU yang dinilai merugikan pekerja dan lingkungan...
+                </p>
+                <a href="#" class="read-more">Baca Selengkapnya</a>
+            </div>
+        </article>
+        
+        <div class="news-grid">
+            <article class="news-card">
+                <img src="https://images.unsplash.com/photo-1580375605115-2e1c2a35f2df?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Demo Buruh" class="news-image">
+                <div class="news-content">
+                    <h2 class="news-title">Buruh Serukan Kenaikan Upah Minimum di Depan Gedung DPR</h2>
+                    <div class="news-meta">18 Oktober 2023 | Ekonomi</div>
+                    <p class="news-excerpt">
+                        Aliansi buruh dari berbagai sektor industri menggelar demonstrasi menuntut kenaikan upah minimum provinsi sebesar 15% untuk tahun depan...
+                    </p>
+                    <a href="#" class="read-more">Baca Selengkapnya</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <img src="https://images.unsplash.com/photo-1593118247619-e2d6f056869e?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Demo Lingkungan" class="news-image">
+                <div class="news-content">
+                    <h2 class="news-title">Aktivis Lingkungan Demo Tolak Pembangunan Pabrik di Kendeng</h2>
+                    <div class="news-meta">15 Oktober 2023 | Lingkungan</div>
+                    <p class="news-excerpt">
+                        Ratusan aktivis lingkungan dan warga Kendeng melakukan protes menolak rencana pembangunan pabrik semen yang dinilai mengancam sumber air dan ekosistem...
+                    </p>
+                    <a href="#" class="read-more">Baca Selengkapnya</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <img src="https://images.unsplash.com/photo-1617791160536-598cf320a77a?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Demo Petani" class="news-image">
+                <div class="news-content">
+                    <h2 class="news-title">Petani Menuntut Perlindungan Lahan Pertanian dari Alih Fungsi</h2>
+                    <div class="news-meta">12 Oktober 2023 | Pertanian</div>
+                    <p class="news-excerpt">
+                        Kelompok tani dari Jawa Barat menggelar aksi damai menuntut perlindungan lahan pertanian produktif dari alih fungsi ke perumahan dan industri...
+                    </p>
+                    <a href="#" class="read-more">Baca Selengkapnya</a>
+                </div>
+            </article>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Tentang BeritaDemo.ID</h3>
+                <p>Media online yang menyajikan berita terkini tentang demonstrasi dan gerakan sosial di Indonesia dengan perspektif yang berimbang dan mendalam.</p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Kategori Berita</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Demo Mahasiswa</a></li>
+                    <li><a href="#">Aksi Buruh</a></li>
+                    <li><a href="#">Gerakan Lingkungan</a></li>
+                    <li><a href="#">Protes Agraria</a></li>
+                    <li><a href="#">Gerakan Perempuan</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Kontak Kami</h3>
+                <ul class="footer-links">
+                    <li>Email: redaksi@beritademo.id</li>
+                    <li>Telepon: (021) 1234-5678</li>
+                    <li>Alamat: Jl. Merdeka No. 123, Jakarta Pusat</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            <p>&copy; 2023 BeritaDemo.ID - All rights reserved</p>
+        </div>
+    </footer>
+</body>
+</html>
