@@ -1,7 +1,7 @@
 public class array {
     public static void main(String[] args) {
         System.out.println("array 1 dimensi");
-        String[] nama = {"Andi", "Budi", "Caca", "Dodi", "Eka"};
+        String[] nama = {"Andi", "Budi", "Nika", "Amba", "Beta"};
         int[] umur = {20, 21, 19, 22, 20};
 
         System.out.println("Daftar Nama dan Umur:");
