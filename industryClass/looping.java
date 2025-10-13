@@ -23,8 +23,8 @@ public class looping {
         } while (j <= 10);
 
         int angka=0;
-        while (angka <= 10) {
-            System.out.print("masukan angka (lebih dari 10 untuk keluar) = ");
+        while (angka < 10) {
+            System.out.print("masukan angka (10 atau lebih untuk keluar) = ");
             angka=input.nextInt();
         }
 
