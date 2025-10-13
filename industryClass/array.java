@@ -12,9 +12,9 @@ public class array {
         String[][] mahasiswa = {
             {"Andi", "20", "Teknik Informatika"},
             {"Budi", "21", "Sistem Informasi"},
-            {"Caca", "19", "Teknik Komputer"},
-            {"Dodi", "22", "Teknologi Informasi"},
-            {"Eka", "20", "Ilmu Komputer"}
+            {"Nika", "19", "Teknik Komputer"},
+            {"Amba", "22", "Teknologi Informasi"},
+            {"Beta", "20", "Ilmu Komputer"}
         };
         System.out.println("Daftar Mahasiswa:");
         for (int i = 0; i < mahasiswa.length; i++) {
