@@ -35,6 +35,7 @@ public class kasirToko {
                 int index = kodeBelian[i] - 1;
                 int subTotal = menuPrices[index] * jumlahItem[i];
                 totalBayar += subTotal;
+                System.out.printf(" %-15s x%d = Rp%d\n", menuItems[index], jumlahItem[i], subTotal);
             }
             //hitumg diskon
             double diskon = 0;
