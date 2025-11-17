@@ -1,5 +1,4 @@
 import java.util.Scanner;
-
 public class kasirToko {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -67,9 +66,7 @@ public class kasirToko {
                 System.out.println("Terima kasih telah menggunakan program kasir kami!");
            
             
+            }
         }
-    }
-                
-            
     }
 }
