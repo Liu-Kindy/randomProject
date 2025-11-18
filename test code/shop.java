@@ -27,10 +27,10 @@ public class shop {
             System.out.println("-----------------------------");
             System.out.print("input amount of skins to buy: ");
             int jumlahSkins = input.nextInt();
-           
+            
             // input skins to buy
             for (int i = 0; i < jumlahSkins; i++) {
-                 System.out.println("=== Neo's Skins Shop ===");
+                System.out.println("=== Neo's Skins Shop ===");
                 System.out.println("character Menu:");
                 System.out.println("-----------------------------");
                 System.out.println("code  | Character       | Info");
@@ -39,7 +39,7 @@ public class shop {
                 System.out.printf("%-5d | %-15s | %s\n", (c + 1), characterMenu[c], info[c]);
             }
             System.out.println("-----------------------------");
-                 System.out.print("Pick a character to view skins(insert the code): ");
+                System.out.print("Pick a character to view skins(insert the code): ");
                 int characterChoice = input.nextInt();
                 int[] kodeBeli = new int[jumlahSkins];
                 
