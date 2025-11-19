@@ -1,4 +1,13 @@
 {
     "discord.enabled": true,
-    "java.debug.settings.onBuildFailureProceed": true
+    "java.debug.settings.onBuildFailureProceed": true,
+    "java.project.sourcePaths": [
+        "full of scanner",
+        "Getskill",
+        "industryClass",
+        "L",
+        "test code",
+        "tugas"
+    ],
+    "java.project.referencedLibraries": []
 }
