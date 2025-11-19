@@ -24,7 +24,7 @@ public class shop {
         boolean running = true;
         
         while (running){
-            System.out.println("=== Welcome to Neo's Skins Shop ===");
+            System.out.println("=== Welcome to Bhutanese Skins Shop ===");
             System.out.println("-----------------------------");
             System.out.print("input amount of skins to buy: ");
             int jumlahSkins = input.nextInt();
@@ -40,7 +40,7 @@ public class shop {
                 boolean pilihCharacter = true;
                 
                 while (pilihCharacter) {
-                    System.out.println("\n=== Neo's Skins Shop ===");
+                    System.out.println("\n=== Bhutanese Skins Shop ===");
                     System.out.println("character Menu:");
                     System.out.println("-----------------------------");
                     System.out.println("code  | Character       | Info");
@@ -206,21 +206,21 @@ public class shop {
                         break;
                 }
                 totalPrice += skinPrice;
-                System.out.printf(" %s - %-15s = Dp%d\n", characterName, skinName, skinPrice);
+                System.out.printf(" %-12s - %-15s = Dp%d\n", characterName, skinName, skinPrice);
             }
             
             System.out.println("-----------------------------");
             System.out.printf("Total Price: Dp%d\n", totalPrice);
             
             //input payment
-            System.out.print("Enter payment amount: ");
+            System.out.print("Enter Dimensional Points(Dp): ");
             int payment = input.nextInt();
             if (payment < totalPrice) {
                 System.out.println("Insufficient payment.");
             } else {
                 int change = payment - totalPrice;
                 System.out.printf("Change: Dp%d\n", change);
-                System.out.println("Thank you for shopping at Neo's Skins Shop!");
+                System.out.println("Thank you for shopping at Bhutanese's Skins Shop!");
             }
             
             System.out.print("Do you want to make another transaction? (y/n): ");
