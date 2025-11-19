@@ -65,7 +65,7 @@ public class kasirToko {
             if(ulang == 'n' || ulang == 'N') {
                 running = false;
                 System.out.println("Terima kasih telah menggunakan program kasir kami!");
-           
+                
             
             }
         }
