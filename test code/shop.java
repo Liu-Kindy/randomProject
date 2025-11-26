@@ -26,6 +26,12 @@ public class shop {
         while (running){
             System.out.println("=== Welcome to Bhutanese Skins Shop ===");
             System.out.println("-----------------------------");
+            System.out.println("code  | Character       | Info");
+            System.out.println("-----------------------------");
+            for (int c = 0; c < characterMenu.length; c++) {
+                System.out.printf("%-5d | %-15s | %s\n", (c + 1), characterMenu[c], info[c]);
+            }
+            System.out.println("-----------------------------");
             System.out.print("input amount of skins to buy: ");
             int jumlahSkins = input.nextInt();
             
