@@ -2,12 +2,13 @@
     "discord.enabled": true,
     "java.debug.settings.onBuildFailureProceed": true,
     "java.project.sourcePaths": [
-        "full of scanner",
-        "Getskill",
-        "industryClass",
-        "L",
+        "tugas",
         "test code",
-        "tugas"
+        "industryClass",
+        "full of scanner",
+        "L",
+        "Getskill",
+        "ExamTest1"
     ],
     "java.project.referencedLibraries": []
 }
