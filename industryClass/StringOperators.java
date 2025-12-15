@@ -8,7 +8,7 @@ public class StringOperators {
         System.out.println("Concatenation: " + str1.concat(" ").concat(str2));
         System.out.println();
         // Length
-        System.out.println("Length of"+ str1+": " + str1.length());
+        System.out.println("Length of "+ str1+": " + str1.length());
         System.out.println();
         // Character at index
         System.out.println("Character at index 1 of "+ str2+": " + str2.charAt(1));
