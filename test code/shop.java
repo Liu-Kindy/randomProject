@@ -15,7 +15,7 @@ public class shop {
         String[] wedgeMANSkinsMenu = {"edgeMan", "Optimus Prime"};
         int[] hargaSkinwedgeMAN = { 5000, 10000};
         String[] info= {
-            "random player from the game named On The Hight.",
+            "random player from the game named Sword Fight On The Hight.",
             "Nothing just the VOID it self. more info on the discord server",
             "A random User known as Neo before he sucked into the game from unknown power.",
             "mysterious virus or hacker no body knows that abusing the F3X toolbox",
