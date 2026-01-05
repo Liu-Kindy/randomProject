@@ -13,7 +13,7 @@ public class HummaSoft1 {
         } else {
             int Selisih_Belanja = 500000 - Belanja;
             System.out.println("Belanja Anda Kurang Dari Rp. 500000");
-           
+            
 
             System.out.println("Silahkan Tambah Lagi Belanja Nya Senilai " + Selisih_Belanja);
             System.out.println("Agar Bisa Mendapatkan Bonus Gantungan Kunci");

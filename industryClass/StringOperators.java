@@ -8,7 +8,7 @@ public class StringOperators {
         System.out.println("Concatenation: " + str1.concat(" ").concat(str2));
         System.out.println();
         // Length
-        System.out.println("Length of"+ str1+": " + str1.length());
+        System.out.println("Length of "+ str1+": " + str1.length());
         System.out.println();
         // Character at index
         System.out.println("Character at index 1 of "+ str2+": " + str2.charAt(1));
@@ -18,7 +18,7 @@ public class StringOperators {
         System.out.println();
         // Replace
         System.out.println("Replace 'l' with 'x' in "+str1+": " + str1.replace('l', 'x'));
-        System.out.println("Replace 'l' with 'x' in "+str2+": " + str2.replace("World", "1x1x1x1"));
+        System.out.println("Replace 'World' with '1x' in "+str2+": " + str2.replace("World", "1x1x1x1"));
         System.out.println();
         // To Upper Case
         System.out.println(str2+" in upper case: " + str2.toUpperCase());
